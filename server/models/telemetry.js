@@ -3,7 +3,9 @@ const { SystemSettings } = require("./systemSettings");
 
 const Telemetry = {
   // Write-only key. It can't read events or any of your other data, so it's safe to use in public apps.
-  pubkey: "phc_9qu7QLpV8L84P3vFmEiZxL020t2EqIubP7HHHxrSsqS",
+  // pubkey: "phc_9qu7QLpV8L84P3vFmEiZxL020t2EqIubP7HHHxrSsqS",
+  pubkey: "phc_AJRSUWJqk2phkmoOjXwqcGzqnSCI0iAGi5APclllWsW", // chen PostHog pubkey
+  // pubkey: "phc_YcWn6KyCJrdYRYA8Il7Hd4w2tAoL2dwc1yN7gzil2hk",
   stubDevelopmentEvents: true, // [DO NOT TOUCH] Core team only.
   label: "telemetry_id",
 
