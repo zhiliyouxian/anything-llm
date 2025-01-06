@@ -175,6 +175,7 @@ class GenericOpenAiLLM {
   }
 
   async streamGetChatCompletion(messages = null, { temperature = 0.7 }, user = {}) {
+    console.log('user========>', user)
     const measuredStreamRequest = await LLMPerformanceMonitor.measureStream(
       this.openai.chat.completions.create({
         model: this.model,
@@ -182,7 +183,7 @@ class GenericOpenAiLLM {
         messages,
         temperature,
         max_tokens: this.maxTokens,
-        user: user.id ? user.id.toString() : ''
+        user: user && user.id ? user.id.toString() : ''
       }),
       messages
       // runPromptTokenCalculation: true - There is not way to know if the generic provider connected is returning

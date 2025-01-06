@@ -105,7 +105,7 @@ export default function SettingsSidebar() {
 
               {/* Primary Body */}
               <div className="h-full flex flex-col w-full justify-between pt-4 overflow-y-scroll no-scroll">
-                <div className="h-auto md:sidebar-items">
+                {/* <div className="h-auto md:sidebar-items">
                   <div className="flex flex-col gap-y-4 pb-[60px] overflow-y-scroll no-scroll">
                     <SidebarOptions user={user} t={t} />
                     <div className="h-[1.5px] bg-[#3D4147] mx-3 mt-[14px]" />
@@ -120,7 +120,7 @@ export default function SettingsSidebar() {
                       {t("settings.privacy")}
                     </Link>
                   </div>
-                </div>
+                </div> */}
               </div>
               <div className="absolute bottom-2 left-0 right-0 pt-2 bg-theme-bg-sidebar bg-opacity-80 backdrop-filter backdrop-blur-md">
                 <Footer />
@@ -158,9 +158,9 @@ export default function SettingsSidebar() {
               <div className="h-auto sidebar-items">
                 <div className="flex flex-col gap-y-2 pb-[60px] overflow-y-scroll no-scroll">
                   <SidebarOptions user={user} t={t} />
-                  <div className="h-[1.5px] bg-[#3D4147] mx-3 mt-[14px]" />
-                  <SupportEmail />
-                  <Link
+                  {/* <div className="h-[1.5px] bg-[#3D4147] mx-3 mt-[14px]" /> */}
+                  {/* <SupportEmail /> */}
+                  {/* <Link
                     hidden={
                       user?.hasOwnProperty("role") && user.role !== "admin"
                     }
@@ -168,7 +168,7 @@ export default function SettingsSidebar() {
                     className="text-theme-text-secondary hover:text-white hover:light:text-theme-text-primary text-xs leading-[18px] mx-3"
                   >
                     {t("settings.privacy")}
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
@@ -270,29 +270,29 @@ const SidebarOptions = ({ user = null, t }) => (
               href: paths.settings.workspaces(),
               roles: ["admin", "manager"],
             },
-            {
-              hidden: !canViewChatHistory,
-              btnText: t("settings.workspace-chats"),
-              href: paths.settings.chats(),
-              flex: true,
-              roles: ["admin", "manager"],
-            },
-            {
-              btnText: t("settings.invites"),
-              href: paths.settings.invites(),
-              roles: ["admin", "manager"],
-            },
+            // {
+            //   hidden: !canViewChatHistory,
+            //   btnText: t("settings.workspace-chats"),
+            //   href: paths.settings.chats(),
+            //   flex: true,
+            //   roles: ["admin", "manager"],
+            // },
+            // {
+            //   btnText: t("settings.invites"),
+            //   href: paths.settings.invites(),
+            //   roles: ["admin", "manager"],
+            // },
           ]}
         />
-        <Option
+        {/* <Option
           btnText={t("settings.agent-skills")}
           icon={<Robot className="h-5 w-5 flex-shrink-0" />}
           href={paths.settings.agentSkills()}
           user={user}
           flex={true}
           roles={["admin"]}
-        />
-        <Option
+        /> */}
+        {/* <Option
           btnText="Community Hub"
           icon={<Globe className="h-5 w-5 flex-shrink-0" />}
           childOptions={[
@@ -315,16 +315,16 @@ const SidebarOptions = ({ user = null, t }) => (
               roles: ["admin"],
             },
           ]}
-        />
-        <Option
+        /> */}
+        {/* <Option
           btnText={t("settings.customization")}
           icon={<PencilSimpleLine className="h-5 w-5 flex-shrink-0" />}
           href={paths.settings.appearance()}
           user={user}
           flex={true}
           roles={["admin", "manager"]}
-        />
-        <Option
+        /> */}
+        {/* <Option
           btnText={t("settings.tools")}
           icon={<Toolbox className="h-5 w-5 flex-shrink-0" />}
           user={user}
@@ -361,7 +361,7 @@ const SidebarOptions = ({ user = null, t }) => (
               roles: ["admin", "manager"],
             },
           ]}
-        />
+        /> */}
         <Option
           btnText={t("settings.security")}
           icon={<Nut className="h-5 w-5 flex-shrink-0" />}
@@ -371,7 +371,7 @@ const SidebarOptions = ({ user = null, t }) => (
           roles={["admin", "manager"]}
           hidden={user?.role}
         />
-        <HoldToReveal key="exp_features">
+        {/* <HoldToReveal key="exp_features">
           <Option
             btnText={t("settings.experimental-features")}
             icon={<Flask className="h-5 w-5 flex-shrink-0" />}
@@ -380,7 +380,7 @@ const SidebarOptions = ({ user = null, t }) => (
             flex={true}
             roles={["admin"]}
           />
-        </HoldToReveal>
+        </HoldToReveal> */}
       </>
     )}
   </CanViewChatHistoryProvider>
